@@ -3,6 +3,6 @@ const router = express.Router();
 const {getHomePage, getSkibidi} = require('../controllers/homeControllers');
 
 router.get('/', getHomePage); 
-router.get('/skibidi', getSkibidi);   
+router.get('/skibidi', getSkibidi); 
 
 module.exports = router;
