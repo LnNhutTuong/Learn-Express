@@ -1,12 +1,15 @@
-const getHomePage = (req, res)=>{
-    res.send('Hello World! & nodemon');
-}
+const connection = require('../config/database')
 
-const getSkibidi = (req, res) =>{
-    res.send('lambada');
+const getHomePage = (req, res)=>{
+    res.render('home');
 }   
+
+const postCreateUser = (req, res ) =>{
+    console.log(">>>>>>check req: ", req.body);
+    res.send("ok");
+}
 
 module.exports = {
     getHomePage,
-    getSkibidi
+    postCreateUser
 }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="./css/style.css">
+<head>
+</head>
+<body>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+<div class="form">
+    <form action="/post-user" method="POST"> <!-- mặc định GET nếu đéo truyền method  -->
+        <fieldset>
+            <legend>Add new User</legend>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="text" name="email">
+            </div>
+            <div class="input-group">
+                <label for="userName">Name</label>
+                <input type="text" name="name">
+            </div>
+            <div class="input-group">
+                <label for="city">City</label>
+                <input type="text" name="city">
+            </div>
+        </fieldset>
+            <button>Add new user</button>
+    </form>
+</div>
+
+</body>
+</html>
+
+
