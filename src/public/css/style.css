@@ -45,3 +45,22 @@ ul li a:hover {
     display: flex;
   gap:10px;
 }
+
+
+.table{
+  margin: 20px 0 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table table th, .table table td{
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}

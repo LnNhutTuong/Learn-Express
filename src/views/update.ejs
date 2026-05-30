@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Update User</title>
+<head>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="/">Home</a></li>
+  <li><a href="/create-page">Create User</a></li>
+</ul>
+
+<div class="form">
+    <form action="/update-user/<%= user.id %>" method="POST"> <!-- mặc định GET nếu đéo truyền method  -->
+        <fieldset>
+            <legend>Update User</legend>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="text" name="email" value ="<%=user.email %>">
+            </div>
+            <div class="input-group">
+                <label for="userName">Name</label>
+                <input type="text" name="name" value ="<%=user.name %>">
+            </div>
+            <div class="input-group">
+                <label for="city">City</label>
+                <input type="text" name="city" value ="<%=user.city %>">
+            </div>
+        </fieldset>
+            <button>Add new user</button>
+    </form>
+</div>
+
+</body>
+</html>
+
+

@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html>
     <link rel="stylesheet" href="./css/style.css">
+    <title>HomePage</title>
 <head>
 </head>
 <body>
 
 <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+  <li><a class="active" href="/">Home</a></li>
+  <li><a href="/create-page">Create User</a></li>
 </ul>
 
-<div class="form">
-    <form action="/post-user" method="POST"> <!-- mặc định GET nếu đéo truyền method  -->
-        <fieldset>
-            <legend>Add new User</legend>
-            <div class="input-group">
-                <label for="email">Email</label>
-                <input type="text" name="email">
-            </div>
-            <div class="input-group">
-                <label for="userName">Name</label>
-                <input type="text" name="name">
-            </div>
-            <div class="input-group">
-                <label for="city">City</label>
-                <input type="text" name="city">
-            </div>
-        </fieldset>
-            <button>Add new user</button>
-    </form>
+<h2>Danh sách các user </h2>
+
+<div class="table">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>City</th>
+      <th>Action</th>
+    </tr>
+    <%  listUser.forEach(user =>{%>
+      <tr>
+        <td><%=user.id%></td>
+        <td><%=user.name%></td>
+        <td><%=user.email%></td>  
+        <td><%=user.city%></td>  
+        <td>
+          <a href="edit-user/<%=user.id%>">Edit</a>
+          <a href="delete-user/<%=user.id%>">Delete</a>
+        </td>
+      </tr>
+      <% })%>
+  </table>
 </div>
 
 </body>
